@@ -1,16 +1,22 @@
 //Business Logic
 
+function Ticket(movie, time, age){
+  var price = movie + time + age;
+  return price;
+
+}
+
+
+
+
+
 //Interface Logic
 $(document).ready(function() {
   $("#movies-form").submit(function(event){
     event.preventDefault();
 
-    var movie = $("#movies").val();
-    var time =  $("#times").val();
-    var age =   $("#age").val();
-    console.log(movie, time, age);
-
-
-
+    var movie = parseInt($("#movies").val());
+    var time =  parseInt($("#times").val());
+    var age =   parseInt($("#age").val());
   });
 });
